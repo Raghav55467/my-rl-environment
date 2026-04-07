@@ -1,0 +1,8 @@
+version: "1.0"
+name: "my-first-env"
+entrypoint: "python main.py"
+observation_space:
+  val: "int"
+action_space:
+  type: "discrete"
+  values: [0, 1]
