@@ -1,0 +1,12 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "my-openenv-project"
+version = "0.1.0"
+description = "RL Environment for OpenEnv Hackathon"
+dependencies = [
+    "fastapi",
+    "uvicorn",
+]
