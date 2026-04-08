@@ -1,0 +1,11 @@
+[[package]]
+name = "my-openenv-project"
+version = "0.1.0"
+source = { editable = "." }
+
+[package.metadata]
+requires-dist = [
+    { name = "fastapi" },
+    { name = "uvicorn" },
+    { name = "openenv-core", specifier = ">=0.2.0" },
+]
