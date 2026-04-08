@@ -1,0 +1,19 @@
+version = 1
+revision = 1
+
+[[package]]
+name = "openenv-server"
+version = "0.1.0"
+source = { editable = "." }
+dependencies = [
+    { name = "fastapi" },
+    { name = "uvicorn" },
+    { name = "openenv-core" },
+]
+
+[package.metadata]
+requires-dist = [
+    { name = "fastapi" },
+    { name = "uvicorn" },
+    { name = "openenv-core", specifier = ">=0.2.0" },
+]
