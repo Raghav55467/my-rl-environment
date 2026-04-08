@@ -1,13 +1,6 @@
 FROM python:3.11
-
 WORKDIR /app
-
-# This covers every possible name for the library
-RUN pip install openenv openenv-core fastapi uvicorn
-
-# If the above fails, this is the 'Force' backup (No spaces in these lines)
-RUN pip install git+https://github.com/openenv/openenv.git || true
-
+# Added openenv-core here
+RUN pip install fastapi uvicorn openenv-core>=0.2.0
 COPY . .
-
-CMD ["python", "main.py"]
+CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8080"]
