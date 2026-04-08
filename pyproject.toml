@@ -1,6 +1,6 @@
 [build-system]
-requires = ["setuptools", "wheel"]
-build-backend = "setuptools.build_meta"
+requires = ["hatchling"]
+build-backend = "hatchling.build_meta"
 
 [project]
 name = "my-openenv-project"
@@ -9,4 +9,9 @@ description = "RL Environment for OpenEnv Hackathon"
 dependencies = [
     "fastapi",
     "uvicorn",
+    "openenv-core>=0.2.0",
 ]
+
+# This fixes the "Missing [project.scripts]" error
+[project.scripts]
+server = "main:app"
